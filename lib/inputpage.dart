@@ -17,22 +17,26 @@ class _InputPageState extends State<InputPage> {
         Expanded(
             child: Row(children: <Widget>[
           Expanded(
-            child: ReusableContainer(),
+            child:
+                ReusableContainer(colour: Color.fromARGB(255, 233, 175, 214)),
           ),
           Expanded(
-            child: ReusableContainer(),
+            child:
+                ReusableContainer(colour: Color.fromARGB(255, 233, 175, 214)),
           ),
         ])),
         Expanded(
-          child: ReusableContainer(),
+          child: ReusableContainer(colour: Color.fromARGB(255, 233, 175, 214)),
         ),
         Expanded(
             child: Row(children: <Widget>[
           Expanded(
-            child: ReusableContainer(),
+            child:
+                ReusableContainer(colour: Color.fromARGB(255, 233, 175, 214)),
           ),
           Expanded(
-            child: ReusableContainer(),
+            child:
+                ReusableContainer(colour: Color.fromARGB(255, 233, 175, 214)),
           ),
         ]))
       ]),
@@ -41,16 +45,15 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableContainer extends StatelessWidget {
-  const ReusableContainer({
-    super.key,
-  });
+  ReusableContainer({required this.colour}) {}
+
+  final Color colour;
 
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 233, 175, 214),
-            borderRadius: BorderRadius.circular(10.0)));
+            color: colour, borderRadius: BorderRadius.circular(10.0)));
   }
 }
