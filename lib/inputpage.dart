@@ -17,48 +17,40 @@ class _InputPageState extends State<InputPage> {
         Expanded(
             child: Row(children: <Widget>[
           Expanded(
-            child: Container(
-                margin: EdgeInsets.all(10.0),
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    
-                    color: Color.fromARGB(255, 233, 175, 214),
-                    borderRadius: BorderRadius.circular(10.0))),
+            child: ReusableContainer(),
           ),
           Expanded(
-            child: Container(
-                margin: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 233, 175, 214),
-                    borderRadius: BorderRadius.circular(10.0))),
+            child: ReusableContainer(),
           ),
         ])),
         Expanded(
-          child: Container(
-              margin: EdgeInsets.all(15.0),
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 233, 175, 214),
-                  borderRadius: BorderRadius.circular(10.0))),
+          child: ReusableContainer(),
         ),
         Expanded(
             child: Row(children: <Widget>[
           Expanded(
-            child: Container(
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 233, 175, 214),
-                    borderRadius: BorderRadius.circular(10.0))),
+            child: ReusableContainer(),
           ),
           Expanded(
-            child: Container(
-                margin: EdgeInsets.all(15.0),
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 233, 175, 214),
-                    borderRadius: BorderRadius.circular(10.0))),
+            child: ReusableContainer(),
           ),
         ]))
       ]),
     );
+  }
+}
+
+class ReusableContainer extends StatelessWidget {
+  const ReusableContainer({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            color: Color.fromARGB(255, 233, 175, 214),
+            borderRadius: BorderRadius.circular(10.0)));
   }
 }
