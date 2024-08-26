@@ -1,5 +1,6 @@
+import 'package:bmi_flutter/components/constant.dart';
 import 'package:flutter/material.dart';
-import 'inputpage.dart';
+import 'screens/inputpage.dart';
 
 void main() {
   runApp(const BMICalculator());
@@ -11,18 +12,16 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          appBarTheme: AppBarTheme(
-            backgroundColor: Color.fromARGB(255, 230, 59, 130),
-            toolbarTextStyle: TextStyle(
-              color: Color.fromARGB(255, 230, 210, 217),
-            ),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: headBottomColour,
+            toolbarTextStyle: labelStyle,
           ),
           brightness: Brightness.dark,
-          primaryColor: const Color.fromARGB(255, 230, 59, 130),
-          scaffoldBackgroundColor: const Color.fromARGB(255, 168, 3, 72),
+          primaryColor: headBottomColour,
+          scaffoldBackgroundColor: bgcolor,
           textSelectionTheme:
               const TextSelectionThemeData(cursorColor: Colors.purple)),
-      home: InputPage(),
+      home: const InputPage(),
     );
   }
 }

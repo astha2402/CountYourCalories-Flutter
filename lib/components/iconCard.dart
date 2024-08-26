@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class genderCard extends StatelessWidget {
-  genderCard({required this.label, required this.ic});
+class iconCard extends StatelessWidget {
+  iconCard({required this.label, required this.ic});
 
   final String label;
   final IconData ic;
@@ -15,11 +15,13 @@ class genderCard extends StatelessWidget {
         SizedBox(
           height: 15.0,
         ),
-        Text(label,
-            style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.white,
-            ))
+        Center(
+          child: Text(label,
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.white,
+              )),
+        )
       ],
     );
   }

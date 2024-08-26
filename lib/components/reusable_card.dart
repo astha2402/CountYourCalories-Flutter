@@ -14,6 +14,7 @@ class ReusableContainer extends StatelessWidget {
         child: Container(
             child: cardChild,
             margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             decoration: BoxDecoration(
                 color: colour, borderRadius: BorderRadius.circular(10.0))));
   }
