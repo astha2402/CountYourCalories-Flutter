@@ -1,4 +1,4 @@
-import 'package:bmi_flutter/screens/inputpage.dart';
+import 'package:bmi_flutter/screens/inputpage1.dart';
 import 'package:bmi_flutter/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 import '../components/constant.dart';
@@ -41,8 +41,7 @@ class ResultsPage extends StatelessWidget {
                 children: <Widget>[
                   Text(result, style: labelStyle),
                   Text(bmi, style: numberStyle),
-                  Text(interpretation,
-                      style: labelStyle)
+                  Text(interpretation, style: labelStyle)
                 ],
               ),
             ),

@@ -1,7 +1,6 @@
-import 'package:bmi_flutter/components/BottomWidget.dart';
 import 'package:bmi_flutter/components/iconCard.dart';
 import 'package:bmi_flutter/components/reusable_card.dart';
-import 'package:bmi_flutter/screens/inputpage.dart';
+import 'package:bmi_flutter/screens/inputpage1.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'activityselection.dart';

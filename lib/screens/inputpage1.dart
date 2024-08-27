@@ -1,4 +1,4 @@
-import 'package:bmi_flutter/calculate_brain.dart';
+import 'package:bmi_flutter/calculateBMI_brain.dart';
 import 'package:bmi_flutter/components/BottomWidget.dart';
 import 'package:bmi_flutter/screens/results_page.dart';
 import 'package:flutter/material.dart';
