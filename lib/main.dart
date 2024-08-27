@@ -1,4 +1,5 @@
 import 'package:bmi_flutter/components/constant.dart';
+import 'package:bmi_flutter/screens/calculationSelection.dart';
 import 'package:flutter/material.dart';
 import 'screens/inputpage.dart';
 
@@ -21,7 +22,7 @@ class BMICalculator extends StatelessWidget {
           scaffoldBackgroundColor: bgcolor,
           textSelectionTheme:
               const TextSelectionThemeData(cursorColor: Colors.purple)),
-      home: const InputPage(),
+      home: const Calculationselection(),
     );
   }
 }

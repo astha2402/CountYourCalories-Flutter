@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class iconCard extends StatelessWidget {
-  iconCard({required this.label, required this.ic});
+  iconCard({required this.label, this.ic});
 
   final String label;
-  final IconData ic;
+  final IconData? ic;
 
   @override
   Widget build(BuildContext context) {

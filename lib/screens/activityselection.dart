@@ -1,3 +1,4 @@
+import 'package:bmi_flutter/components/BottomWidget.dart';
 import 'package:bmi_flutter/components/constant.dart';
 import 'package:bmi_flutter/components/iconCard.dart';
 import 'package:bmi_flutter/components/reusable_card.dart';
@@ -55,7 +56,8 @@ class _ActivitySelectionState extends State<ActivitySelection> {
                       },
                       colour: reusableContainerColor,
                       cardChild: iconCard(
-                          ic: FontAwesomeIcons.person-walking, label: 'LIGHTY ACTIVE')),
+                          ic: FontAwesomeIcons.personWalking,
+                          label: 'LIGHTY ACTIVE')),
                 )
               ],
             )),
@@ -71,7 +73,8 @@ class _ActivitySelectionState extends State<ActivitySelection> {
                       },
                       colour: reusableContainerColor,
                       cardChild: iconCard(
-                          ic: FontAwesomeIcons.person, label: 'MODERATELY ACTIVE')),
+                          ic: FontAwesomeIcons.personRunning,
+                          label: 'MODERATELY ACTIVE')),
                 ),
                 Expanded(
                   child: ReusableContainer(
@@ -82,12 +85,13 @@ class _ActivitySelectionState extends State<ActivitySelection> {
                       },
                       colour: reusableContainerColor,
                       cardChild: iconCard(
-                          ic: FontAwesomeIcons.person-running, label: 'HEAVILY ACTIVE')),
+                          ic: FontAwesomeIcons.personSwimming,
+                          label: 'HEAVILY ACTIVE')),
                 )
               ],
             )),
-            Row(
-              children: <Widget>[Expanded(
+            Row(children: <Widget>[
+              Expanded(
                 child: ReusableContainer(
                     onPress: () {
                       setState(() {
@@ -96,26 +100,19 @@ class _ActivitySelectionState extends State<ActivitySelection> {
                     },
                     colour: reusableContainerColor,
                     cardChild: iconCard(
-                        ic: FontAwesomeIcons.person, label: 'SUPER ACTIVE')),
+                        ic: FontAwesomeIcons.personDigging,
+                        label: 'SUPER ACTIVE')),
               )
-              ]
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ActivitySelection()
-                    )));
-              },
-              child: Container(
-                color: headBottomColour,
-                padding: const EdgeInsets.all(10.0),
-                width: double.infinity,
-                height: 50.0,
-                child: Center(
-                  child: const Text("NEXT", style: labelStyle),
-                ),
-              ),
-            ),
+            ]),
+            ButtonWidget(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ActivitySelection()));
+                },
+                heightButton: 50.0,
+                buttonLabel: "CALCULATE BMR")
           ],
         ));
   }

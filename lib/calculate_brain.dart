@@ -21,4 +21,15 @@ class CalculateBrain {
       return "UNDER-WEIGHT";
     }
   }
+
+  String interpretation() {
+    double bmi = weight / pow(height / 100, 2);
+    if (bmi >= 25) {
+      return "Your BMI is quite high. You should consume less calories.";
+    } else if (bmi >= 18.5) {
+      return "Your BMI is perfect.";
+    } else {
+      return "Your BMI is quite low. You should consume more calories.";
+    }
+  }
 }
