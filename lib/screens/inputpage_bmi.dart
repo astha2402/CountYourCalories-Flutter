@@ -1,6 +1,6 @@
 import 'package:bmi_flutter/calculateBMI_brain.dart';
 import 'package:bmi_flutter/components/BottomWidget.dart';
-import 'package:bmi_flutter/screens/results_page.dart';
+import 'package:bmi_flutter/screens/results_page_bmi.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/iconCard.dart';
@@ -10,64 +10,26 @@ import '../components/RoundCard.dart';
 import 'dart:core';
 import 'activityselection.dart';
 
-class InputPage extends StatefulWidget {
-  const InputPage({super.key});
+class InputPageBMI extends StatefulWidget {
+  const InputPageBMI({super.key});
   @override
   _InputPageState createState() => _InputPageState();
 }
 
-class _InputPageState extends State<InputPage> {
+class _InputPageState extends State<InputPageBMI> {
   @override
-  Gender? selectedGender;
   int height = 180;
   int weight = 60;
-  int age = 18;
+  int age = 20;
 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text('BMR CALCULATOR', style: labelStyle)),
+          title: const Center(child: Text('BMI CALCULATOR', style: labelStyle)),
         ),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
-                  child: Row(children: <Widget>[
-                Expanded(
-                  child: ReusableContainer(
-                      onPress: () {
-                        setState(() {
-                          selectedGender = Gender.male;
-                        });
-                      },
-                      colour: selectedGender == Gender.male
-                          ? activeCardColor
-                          : inactiveCardColor,
-                      cardChild: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          iconCard(label: 'MALE', ic: FontAwesomeIcons.mars),
-                        ],
-                      )),
-                ),
-                Expanded(
-                  child: ReusableContainer(
-                      onPress: () {
-                        setState(() {
-                          selectedGender = Gender.female;
-                        });
-                      },
-                      colour: selectedGender == Gender.female
-                          ? activeCardColor
-                          : inactiveCardColor,
-                      cardChild: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          iconCard(label: 'FEMALE', ic: FontAwesomeIcons.venus),
-                        ],
-                      )),
-                ),
-              ])),
               Expanded(
                 child: ReusableContainer(
                     colour: reusableContainerColor,

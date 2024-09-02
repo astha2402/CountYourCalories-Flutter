@@ -25,7 +25,8 @@ enum Activity {
   lightActive,
   moderateActive,
   heavyActive,
-  superActive
+  superActive,
+  notmentioned
 }
 
 enum Gender { male, female, notmentioned }

@@ -1,15 +1,13 @@
-import 'package:bmi_flutter/screens/inputpage1.dart';
+import 'package:bmi_flutter/screens/inputpage_bmi.dart';
 import 'package:bmi_flutter/components/reusable_card.dart';
+import 'package:bmi_flutter/screens/inputpage_bmr.dart';
 import 'package:flutter/material.dart';
 import '../components/constant.dart';
 
-class ResultsPage extends StatelessWidget {
-  ResultsPage(
-      {required this.bmi, required this.result, required this.interpretation});
+class ResultsPageBMR extends StatelessWidget {
+  ResultsPageBMR({required this.bmr});
 
-  final String bmi;
-  final String result;
-  final String interpretation;
+  final String bmr;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +37,7 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(result, style: labelStyle),
-                  Text(bmi, style: numberStyle),
-                  Text(interpretation, style: labelStyle)
+                  Text(bmr, style: labelStyle),
                 ],
               ),
             ),
@@ -51,7 +47,7 @@ class ResultsPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => InputPage(),
+                  builder: (context) => InputPageBMR(),
                 ),
               );
             },
