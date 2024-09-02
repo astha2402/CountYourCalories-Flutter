@@ -40,6 +40,19 @@ class Calculationselection extends StatelessWidget {
                 cardChild: iconCard(
                     label: "CALCULATE BMR", ic: FontAwesomeIcons.appleWhole),
               ),
+            ),
+            Expanded(
+              child: ReusableContainer(
+                colour: reusableContainerColor,
+                onPress: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ActivitySelection()));
+                },
+                cardChild: iconCard(
+                    label: "CALORIES COUNT", ic: FontAwesomeIcons.plateWheat),
+              ),
             )
           ],
         ));

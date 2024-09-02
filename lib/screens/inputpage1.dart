@@ -10,8 +10,6 @@ import '../components/RoundCard.dart';
 import 'dart:core';
 import 'activityselection.dart';
 
-enum Gender { male, female, notmentioned }
-
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
   @override
