@@ -19,6 +19,6 @@ class CalculatebmrBrain {
     } else if (gender == Gender.male) {
       bmr = 13.397 * weight + 4.799 * height - 5.677 * age + 88.362;
     }
-    return bmr.toString();
+    return bmr.toStringAsFixed(1);
   }
 }

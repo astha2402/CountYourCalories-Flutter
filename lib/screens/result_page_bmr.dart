@@ -1,11 +1,10 @@
-import 'package:bmi_flutter/screens/inputpage_bmi.dart';
 import 'package:bmi_flutter/components/reusable_card.dart';
 import 'package:bmi_flutter/screens/inputpage_bmr.dart';
 import 'package:flutter/material.dart';
 import '../components/constant.dart';
 
 class ResultsPageBMR extends StatelessWidget {
-  ResultsPageBMR({required this.bmr});
+  const ResultsPageBMR({super.key, required this.bmr});
 
   final String bmr;
 
@@ -24,8 +23,8 @@ class ResultsPageBMR extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              child: Center(
-                child: const Text("YOUR RESULT", style: titleTextstyle),
+              child: const Center(
+                child: Text("YOUR RESULT", style: titleTextstyle),
               ),
             ),
           ),

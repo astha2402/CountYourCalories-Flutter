@@ -6,7 +6,6 @@ import 'package:bmi_flutter/components/reusable_card.dart';
 import 'package:bmi_flutter/screens/result_page_cal.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bmi_flutter/calories.dart';
 
 class ActivitySelection extends StatefulWidget {
   const ActivitySelection({super.key});
@@ -16,7 +15,6 @@ class ActivitySelection extends StatefulWidget {
 }
 
 class _ActivitySelectionState extends State<ActivitySelection> {
-  @override
   Activity personActive = Activity.notmentioned;
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,7 +110,7 @@ class _ActivitySelectionState extends State<ActivitySelection> {
             ButtonWidget(
                 onTap: () {
                   CalculateCalories calBr =
-                      new CalculateCalories(activity: personActive);
+                      CalculateCalories(activity: personActive);
                   Navigator.push(
                       context,
                       MaterialPageRoute(

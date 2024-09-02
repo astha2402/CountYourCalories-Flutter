@@ -3,12 +3,10 @@ import 'package:bmi_flutter/components/BottomWidget.dart';
 import 'package:bmi_flutter/screens/results_page_bmi.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../components/iconCard.dart';
 import '../components/reusable_card.dart';
 import '../components/constant.dart';
 import '../components/RoundCard.dart';
 import 'dart:core';
-import 'activityselection.dart';
 
 class InputPageBMI extends StatefulWidget {
   const InputPageBMI({super.key});
@@ -17,7 +15,6 @@ class InputPageBMI extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPageBMI> {
-  @override
   int height = 180;
   int weight = 60;
   int age = 20;

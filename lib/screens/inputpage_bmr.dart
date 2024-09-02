@@ -16,7 +16,6 @@ class InputPageBMR extends StatefulWidget {
 }
 
 class _InputPageBMRState extends State<InputPageBMR> {
-  @override
   Gender selectedGender = Gender.notmentioned;
   int height = 180;
   int weight = 60;
